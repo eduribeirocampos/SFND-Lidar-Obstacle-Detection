@@ -1,16 +1,10 @@
-## Eduardo Ribeiro de Campos - March 2021
+## Eduardo Ribeiro de Campos - March 2021.
 
 # Sensor Fusion Nanodegree Program - Project: Lidar Obstacle Detection.
 
-[//]: # (Image References)
- 
-[image1]: ./support_imgs/final-project-ros-graph-v2.jpg
-[image2]: ./support_imgs/tl-detector-ros-graph.jpg
-[image3]: ./support_imgs/Object_detection.jpg
-[image4]: ./support_imgs/waypoint-updater-ros-graph.jpg
-[image5]: ./support_imgs/dbw-node-ros-graph.jpg
-[image6]: ./support_imgs/Traffic_light_detection_test.jpg 
-[image7]: ./support_imgs/Simulator.jpg 
+<p align="center">
+  <img width="948" height="532" src="./images/pcdstream_1.gif">
+</p>
 
 
 Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was teached by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professionals from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
@@ -19,10 +13,10 @@ It was studied the best practice to develop a pipeline to work with Lidar data.F
 
 The goals of the project is available in the [project Rubric](https://review.udacity.com/#!/rubrics/2529/view) webpage.
 
-1.Segmentation (RANSAC).
-2.Clustering (KD-Tree and Euclidean Clustering).
-3.Bounding boxes
-4.Downsampling data. (Voxel Grid - Region of Interest).
+1.Segmentation (RANSAC).<\br>
+2.Clustering (KD-Tree and Euclidean Clustering).<\br>
+3.Bounding boxes<\br>
+4.Downsampling data. (Voxel Grid - Region of Interest).<\br>
 
 
 
