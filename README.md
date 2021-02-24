@@ -1,6 +1,6 @@
 ## Eduardo Ribeiro de Campos - March 2021
 
-# Sensor Fusion Nano degree - Lidar Obstacle Detection.
+# Sensor Fusion Nanodegree Program - Project: Lidar Obstacle Detection.
 
 [//]: # (Image References)
  
@@ -13,14 +13,18 @@
 [image7]: ./support_imgs/Simulator.jpg 
 
 
-This is the project repo for the first project of the Udacity Sensor Fusion Nanodegree Program. 
-
-Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was supported by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professional from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
+Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was teached by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professionals from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
 
 It was studied the best practice to develop a pipeline to work with Lidar data.For more details please check the [Velodyne website](https://velodynelidar.com/products/hdl-64e/) and the [Point Cloud Library](https://pointclouds.org/).
 
+The goals of the project is available in the [project Rubric](https://review.udacity.com/#!/rubrics/2529/view) webpage.
 
-: Programming a Real Self-Driving Car. the Udacity project official repo is [here](https://github.com/udacity/CarND-Capstone). The simulator could be found [here](https://github.com/udacity/CarND-Capstone/releases).
+1.Segmentation (RANSAC).
+2.Clustering (KD-Tree and Euclidean Clustering).
+3.Bounding boxes
+4.Downsampling data. (Voxel Grid - Region of Interest).
+
+
 
 ### System requirements.
 
