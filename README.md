@@ -1,5 +1,6 @@
-# Lidar-Obstacle-Detection
-Udacity -Sensor Fusion - Project 1
+## Eduardo Ribeiro de Campos - March 2021
+
+# Sensor Fusion Nano degree - Lidar Obstacle Detection.
 
 [//]: # (Image References)
  
@@ -12,14 +13,14 @@ Udacity -Sensor Fusion - Project 1
 [image7]: ./support_imgs/Simulator.jpg 
 
 
-## Eduardo Ribeiro de Campos - October 2019
+This is the project repo for the first project of the Udacity Sensor Fusion Nanodegree Program. 
+
+Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was supported by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professional from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
+
+It was studied the best practice to develop a pipeline to work with Lidar data.For more details please check the [Velodyne website](https://velodynelidar.com/products/hdl-64e/) and the [Point Cloud Library](https://pointclouds.org/).
 
 
-# CarND- Capstone Project. 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-
-
-This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. the Udacity project official repo is [here](https://github.com/udacity/CarND-Capstone). The simulator could be found [here](https://github.com/udacity/CarND-Capstone/releases).
+: Programming a Real Self-Driving Car. the Udacity project official repo is [here](https://github.com/udacity/CarND-Capstone). The simulator could be found [here](https://github.com/udacity/CarND-Capstone/releases).
 
 ### System requirements.
 
