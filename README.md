@@ -1,6 +1,7 @@
 ## Eduardo Ribeiro de Campos - March 2021.
 
-# Sensor Fusion Nanodegree Program - Project: Lidar Obstacle Detection.
+# Project: Lidar Obstacle Detection.
+## Sensor Fusion Nanodegree Program.
 
 <p align="center">
   <img width="948" height="532" src="./images/pcdstream_1.gif">
@@ -31,7 +32,12 @@ The next gif file shows the RANSAC method applied for line fitting with outliers
 </p>
 
 
+One type of RANSAC version selects the smallest possible subset of points to fit. For a line, that would be two points, and for a plane three points. Then the number of inliers are counted, by iterating through every remaining point and calculating its distance to the model. The points that are within a certain distance to the model are counted as inliers. The iteration that has the highest number of inliers is then the best model. This algorithm is availabe on the [..src/quiz/ransac/](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/tree/main/src/quiz/ransac) folder. To run This simulation follow the next steps in `linux terminal`:
 
+```
+* Go to ..src/quiz/ransac/build
+* execute ./quizRansac
+```
 
 
 
