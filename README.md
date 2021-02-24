@@ -13,10 +13,10 @@ It was studied the best practice to develop a pipeline to work with Lidar data.F
 
 The goals of the project is available in the [project Rubric](https://review.udacity.com/#!/rubrics/2529/view) webpage.
 
-1.Segmentation (RANSAC).<\br>
-2.Clustering (KD-Tree and Euclidean Clustering).<\br>
-3.Bounding boxes<\br>
-4.Downsampling data. (Voxel Grid - Region of Interest).<\br>
+1.Segmentation (RANSAC).<br/>
+2.Clustering (KD-Tree and Euclidean Clustering).<br/>
+3.Bounding boxes.<br/>
+4.Downsampling data. (Voxel Grid - Region of Interest).<br/>
 
 
 
