@@ -20,7 +20,20 @@ The goals of the project is available in the [project Rubric](https://review.uda
 
 
 
-### System requirements.
+## 1. Segmentation.
+
+We want to be able to locate obstacles in the scene. However, some objects in our scene are not obstacles. What would be objects that appear in the pcd but are not obstacles? For the most part, any free space on the road is not an obstacle, and if the road is flat it’s fairly straightforward to pick out road points from non-road points. To do this we will use a method called Planar Segmentation which uses the `RANSAC` (random sample consensus) algorithm.
+
+The next gif file shows the RANSAC method applied for line fitting with outliers.
+
+<p align="center">
+  <img width="639" height="480" src="./images/ransac-linie-animiert.gif">
+</p>
+
+
+
+
+
 
 Because ROS is used, you will need to use Ubuntu to develop and test your project code. You may use:
 
