@@ -70,12 +70,12 @@ The naive approach of finding nearby neighbors is to go through every single poi
 
 ```
 * Go to ..src/quiz/cluster/build
-* execute ./quizRansac
+* execute ./quizCluster
 ```
 Below the result.
 
 <p align="center">
-  <img width="617" height="385" src="./images/kdtree5.jpg">
+  <img width="617" height="385" src="./images/KdTree2D.jpg">
 </p>
 
 
