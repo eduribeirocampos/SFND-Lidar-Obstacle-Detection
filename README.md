@@ -33,7 +33,7 @@ The next gif file shows the RANSAC method applied for line fitting with outliers
 </p>
 
 
-One type of RANSAC version selects the smallest possible subset of points to fit. For a line, that would be two points, and for a plane three points. Then the number of inliers are counted, by iterating through every remaining point and calculating its distance to the model. The points that are within a certain distance to the model are counted as inliers. The iteration that has the highest number of inliers is then the best model. This algorithm is availabe on the [..src/quiz/ransac/](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/tree/main/src/quiz/ransac) folder. To run This simulation follow the next steps in `linux terminal`:
+One type of RANSAC version selects the smallest possible subset of points to fit. For a line, that would be two points, and for a plane three points. Then the number of inliers are counted, by iterating through every remaining point and calculating its distance to the model. The points that are within a certain distance to the model are counted as inliers. The iteration that has the highest number of inliers is then the best model. This algorithm is availabe on the file [line_ransac2d.cpp](./src/quiz/ransac/line_ransac2d.cpp). To run This simulation follow the next steps in `linux terminal`:
 
 ```
 * Go to ..src/quiz/ransac/build
@@ -48,7 +48,7 @@ Below the result.
 The Ransac code in the main code is available from lines xxxx to xxxx.
 
 
-Below the result applied to the [simpleHighway.pcd](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/blob/main/src/sensors/data/pcd/simpleHighway.pcd)
+Below the result applied to the [simpleHighway.pcd](./src/sensors/data/pcd/simpleHighway.pcd)
 
 
 
@@ -71,7 +71,7 @@ A KD-Tree is a binary tree that splits points between alternating axes. By separ
 
 Once the KD-Tree method for searching for nearby points is implemented, its not difficult to implement a euclidean clustering method that groups individual cluster indices based on their proximity
 
-This algorithm is availabe on the [..src/quiz/cluster/](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/tree/main/src/quiz/cluster) folder. To run the simulation follow the next steps in `linux terminal`:
+This algorithm is availabe on the file [cluster.cpp](./src/quiz/cluster/cluster.cpp). To run the simulation follow the next steps in `linux terminal`:
 
 ```
 * Go to ..src/quiz/cluster/build
@@ -86,10 +86,49 @@ Below the result.
 The Cluster code in the main code is available from lines xxxx to xxxx.
 
 
-Below the result applied to the [simpleHighway.pcd](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/blob/main/src/sensors/data/pcd/simpleHighway.pcd)
+Below the result applied to the [simpleHighway.pcd](./src/sensors/data/pcd/simpleHighway.pcd)
 
 
 ## 3.Bounding boxes.
+
+according to [Michael Maile](https://www.youtube.com/watch?v=kk39stQPG84&feature=emb_logo)
+
+"Bounding boxes are relatively easy way of dealing with objects because then you just associate the points to a bounding box or now if you say, Okay, this object is in the bounding box, Okay, this is now pedestrian , this point is not on the boundingbox, this is something else.It is relatively easy way of dealing with it. The issue though is that you are making model assumptions about the size of the bounding box that you assign to let say a car, or to a pedestrian, and this violates the assumptions of the bounding box,then things tend to look somehow strange".
+
+The Bounding box function is available on file: [processPointClouds.cpp]((./src/processPointClouds.cpp))  from lines 180 to 197.
+
+```
+template<typename PointT>
+Box ProcessPointClouds<PointT>::BoundingBox(typename pcl::PointCloud<PointT>::Ptr cluster)
+{
+
+    // Find bounding box for one of the clusters
+    PointT minPoint, maxPoint;
+    pcl::getMinMax3D(*cluster, minPoint, maxPoint);
+
+    Box box;
+    box.x_min = minPoint.x;
+    box.y_min = minPoint.y;
+    box.z_min = minPoint.z;
+    box.x_max = maxPoint.x;
+    box.y_max = maxPoint.y;
+    box.z_max = maxPoint.z;
+
+    return box;
+}
+```
+
+Below the result applied to the [simpleHighway.pcd](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/blob/main/src/sensors/data/pcd/simpleHighway.pcd)
+
+
+
+
+
+
+
+
+
+
 
 
 ## Traffic light detector.
