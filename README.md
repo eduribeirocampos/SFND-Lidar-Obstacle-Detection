@@ -38,21 +38,29 @@ One type of RANSAC version selects the smallest possible subset of points to fit
 * Go to ..src/quiz/ransac/build
 * execute ./quizRansac
 ```
+Below the result.
+
+<p align="center">
+  <img width="674" height="309" src="./images/Ransac2D.jpg">
+</p>
+
+The Ransac code in the main code is available from lines xxxx to xxxx.
 
 
 
-Because ROS is used, you will need to use Ubuntu to develop and test your project code. You may use:
 
-- Ubuntu 14.04 with ROS Indigo
-- Ubuntu 16.04 with ROS Kinetic
 
-More details regarding `systems requirements` and `project procedures` was included at the end of this README file.
+## 2. Clustering.
 
-**System architecture diagram showing the ROS nodes and topics used in the project.**
+You have a way to segment points and recognize which ones represent obstacles for your car. It would be great to break up and group those obstacle points, especially if you want to do multiple object tracking with cars, pedestrians, and bicyclists, for instance. One way to do that grouping and cluster point cloud data is called euclidean clustering.
 
-![alt text][image1]
+### Euclidean Clustering.
 
-To accomplish the goals, it was necessary work on 3 nodes of the above architecture. `Traffic light detector` , `Waypoints updater` and `twist controller`.
+The idea is you associate groups of points by how close together they are. To do a nearest neighbor search efficiently, you use a KD-Tree data structure which, on average, speeds up your look up time from O(n) to O(log(n)). This is because the tree allows you to better break up your search space. By grouping points into regions in a KD-Tree, you can avoid calculating distance for possibly thousands of points just because you know they are not even considered in a close enough region.
+
+A KD-Tree is a binary tree that splits points between alternating axes. By separating space by splitting regions, nearest neighbor search can be made much faster when using an algorithm like euclidean clustering.
+
+
 
 
 ## Traffic light detector.
