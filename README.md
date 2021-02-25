@@ -58,8 +58,25 @@ You have a way to segment points and recognize which ones represent obstacles fo
 
 The idea is you associate groups of points by how close together they are. To do a nearest neighbor search efficiently, you use a KD-Tree data structure which, on average, speeds up your look up time from O(n) to O(log(n)). This is because the tree allows you to better break up your search space. By grouping points into regions in a KD-Tree, you can avoid calculating distance for possibly thousands of points just because you know they are not even considered in a close enough region.
 
-A KD-Tree is a binary tree that splits points between alternating axes. By separating space by splitting regions, nearest neighbor search can be made much faster when using an algorithm like euclidean clustering.
+A KD-Tree is a binary tree that splits points between alternating axes. By separating space by splitting regions, nearest neighbor search can be made much faster when using an algorithm like euclidean clustering. Below the image showing a schematic tree to make easy undertand the concept. The new point (7.2, 6.1) must inserted to D node.
 
+<p align="center">
+  <img width="617" height="385" src="./images/kdtree5.jpg">
+</p>
+
+Once points are able to be inserted into the tree, the next step is being able to search for nearby points inside the tree compared to a given target point. Points within a distance of distanceTol are considered to be nearby. The KD-Tree is able to split regions and allows certain regions to be completely ruled out, speeding up the process of finding nearby neighbors.
+
+The naive approach of finding nearby neighbors is to go through every single point in the tree and compare their distances with the target, selecting point indices that fall within the distance tolerance of the target. Instead with the KD-Tree you can compare distance within a boxed square that is 2 x distanceTol for length, centered around the target point. If the current node point is within this box then you can directly calculate the distance and see if the point id should be added to the list of nearby ids. Then you see if your box crosses over the node division region and if it does compare that next node. You do this recursively, with the advantage being that if the box region is not inside some division region you completely skip that branch. This algorithm is availabe on the [..src/quiz/cluster/](https://github.com/eduribeirocampos/Lidar-Obstacle-Detection/tree/main/src/quiz/cluster) folder. To run This simulation follow the next steps in `linux terminal`:
+
+```
+* Go to ..src/quiz/cluster/build
+* execute ./quizRansac
+```
+Below the result.
+
+<p align="center">
+  <img width="617" height="385" src="./images/kdtree5.jpg">
+</p>
 
 
 
