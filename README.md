@@ -4,7 +4,7 @@
 ## Sensor Fusion Nanodegree Program.
 
 <p align="center">
-  <img width="948" height="532" src="./images/pcdstream_1.gif">
+  <img  src="./images/pcdstream_1.gif" width="700">
 </p>
 
 
