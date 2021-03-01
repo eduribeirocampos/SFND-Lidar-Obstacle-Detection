@@ -12,14 +12,12 @@ Throughout the Lidar course, we learned perspectives about Lidar from [Michael M
 
 It was studied the best practice to develop a pipeline to work with Lidar data.For more details please check the [Velodyne website](https://velodynelidar.com/products/hdl-64e/) and the [Point Cloud Library](https://pointclouds.org/).
 
-The goals of the project is available in the [project Rubric](https://review.udacity.com/#!/rubrics/2529/view) webpage.
-
 The whole process consider the next 4 main steps.
 
 1.Segmentation (RANSAC).<br/>
 2.Clustering (KD-Tree).<br/>
 3.Bounding boxes.<br/>
-4.Downsampling data. (Voxel Grid - Region of Interest).<br/>
+4.Filtering and Downsampling data. (Voxel Grid - Region of Interest).<br/>
 
 
 ## 1. Segmentation.
@@ -81,13 +79,41 @@ Below the result.
 The Cluster code in the main code is available from lines xxxx to xxxx.
 
 
-The implementation of `Clustering Points` was constructed in 3 Function, `clusterHelper` , `euclideanCluster` and `Clustering_NoPCL`. In the main code is available on file [processPointClouds.cpp](src/processPointClouds.cpp] from lines 268 to 343.
+The implementation of `Clustering Points` was constructed in 3 Function, `clusterHelper` , `euclideanCluster` and `Clustering_NoPCL`. In the main code is available on file [processPointClouds.cpp](./src/processPointClouds.cpp) from lines 268 to 343.
 
 
 ## 3.Bounding boxes.
 
-according to [Michael Maile](https://www.youtube.com/watch?v=kk39stQPG84&feature=emb_logo)
+according to Michael Maile [video](https://www.youtube.com/watch?v=kk39stQPG84&feature=emb_logo):
 
 "Bounding boxes are relatively easy way of dealing with objects because then you just associate the points to a bounding box or now if you say, Okay, this object is in the bounding box, Okay, this is now pedestrian , this point is not on the boundingbox, this is something else.It is relatively easy way of dealing with it. The issue though is that you are making model assumptions about the size of the bounding box that you assign to let say a car, or to a pedestrian, and this violates the assumptions of the bounding box,then things tend to look somehow strange".
 
-The Bounding box function is available on file: [processPointClouds.cpp]((./src/processPointClouds.cpp))  from lines 345 to 362.
+The Bounding box function is available on file: [processPointClouds.cpp](./src/processPointClouds.cpp)  from lines 345 to 362.
+
+## 4.Filtering and Downsampling data
+
+### Voxel Grid.
+Voxel grid filtering will create a cubic grid and will filter the cloud by only leaving a single point per voxel cube, so the larger the cube length the lower the resolution of the point cloud.
+
+### Region of Interest
+A boxed region is defined and any points outside that box are removed.
+
+The arguments to this function will be your input cloud, voxel grid size, and min/max points representing your region of interest. The function will return the downsampled cloud with only points that were inside the region specified. To get started check out the documentation from PCL for [voxel grid filtering](https://pointclouds.org/documentation/tutorials/voxel_grid.html) and [region of interest](https://pointclouds.org/documentation/classpcl_1_1_statistical_multiscale_interest_region_extraction.html).
+
+# Goals.
+
+The goals of the project is available in the [project Rubric](https://review.udacity.com/#!/rubrics/2529/view) webpage.
+
+# Final result.
+
+The `Main Code` is the file [environment.cpp](./src/environment.cpp). To run the simulation follow the next steps in `linux terminal`:
+
+```
+* Go to ..src/build
+* execute ./environment
+```
+Below the result.
+
+<p align="center">
+  <img src="./images/final_video.jpg" width="600" url= "https://www.youtube.com/watch?v=K5tcjX1W1BU" >
+</p>
