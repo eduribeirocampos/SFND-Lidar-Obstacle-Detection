@@ -117,6 +117,6 @@ click on the next picture to open the video to show the results:
 
 [![alt text |width=450px | align="middle"][image6]](https://www.youtube.com/watch?v=K5tcjX1W1BU)
 
-# Support resources.
+## Support resources.
 
 Some images from this readme file are from the lessons class of the Sensor fusion - Udacity  Nanodegree program.
