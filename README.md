@@ -113,6 +113,6 @@ The `Main Code` is the file [environment.cpp](./src/environment.cpp). To run the
 * Go to ..src/build
 * execute ./environment
 ```
-Below the result.
+click on the next picture to open the video to show the results:
 
-![alt text |width=450px | align="middle"][image6]](https://www.youtube.com/watch?v=K5tcjX1W1BU)
+[![alt text |width=450px | align="middle"][image6]](https://www.youtube.com/watch?v=K5tcjX1W1BU)
