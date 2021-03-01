@@ -53,7 +53,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
 
   
   pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloud2;
-  inputCloud2 = pointProcessor.FilterCloud(inputCloud, 0.65 , Eigen::Vector4f (-10,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
+  inputCloud2 = pointProcessor.FilterCloud(inputCloud, 0.35 , Eigen::Vector4f (-10,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
   
   std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> RansacSegmentCloud1 = pointProcessor.RANSAC_SegmentPlane(inputCloud1, 150 , 0.2);
 
