@@ -119,4 +119,4 @@ click on the next picture to open the video to show the results:
 
 ## Support resources.
 
-Some images from this readme file are from the lessons class of the Sensor fusion - Udacity  Nanodegree program.
+Some images and texts from this readme file are from the lessons class of the Sensor fusion - Udacity  Nanodegree program.
