@@ -1,11 +1,20 @@
+[//]: # (Image References)
+ 
+[image1]: ./images/pcdstream_1.gif
+[image2]: ./images/ransac-linie-animiert.gif
+[image3]: ./images/Ransac2D.jpg
+[image4]: ./images/kdtree5.jpg
+[image5]: ./images/KdTree2D.jpg
+[image6]: ./images/final_video.jpg
+
+
+
 ## Eduardo Ribeiro de Campos - March 2021.
 
 # Project: Lidar Obstacle Detection.
 ## Sensor Fusion Nanodegree Program.
 
-<p align="center">
-  <img  src="./images/pcdstream_1.gif" width="700">
-</p>
+![alt text |width=450px | align="middle"][image1]
 
 
 Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was teached by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professionals from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
@@ -26,9 +35,7 @@ We want to be able to locate obstacles in the scene. However, some objects in ou
 
 The next gif file shows the RANSAC method applied for line fitting with outliers.
 
-<p align="center">
-  <img  src="./images/ransac-linie-animiert.gif" width="639">
-</p>
+![alt text |width=450px | align="middle"][image2]
 
 
 One type of RANSAC version selects the smallest possible subset of points to fit. For a line, that would be two points, and for a plane three points. Then the number of inliers are counted, by iterating through every remaining point and calculating its distance to the model. The points that are within a certain distance to the model are counted as inliers. The iteration that has the highest number of inliers is then the best model. This algorithm is availabe on the file [line_ransac2d.cpp](./src/quiz/ransac/line_ransac2d.cpp). To run This simulation follow the next steps in `linux terminal`:
@@ -39,9 +46,7 @@ One type of RANSAC version selects the smallest possible subset of points to fit
 ```
 Below the result.
 
-<p align="center">
-  <img  src="./images/Ransac2D.jpg" width="674">
-</p>
+![alt text |width=450px | align="middle"][image3]
 
 The Ransac Function used in the main [code](/src/) is available on file [processPointClouds.cpp](src/processPointClouds.cpp] from lines 134 to 222.
 
@@ -58,9 +63,7 @@ Once points are able to be inserted into the tree, the next step is being able t
 
 A KD-Tree is a binary tree that splits points between alternating axes. By separating space by splitting regions, nearest neighbor search can be made much faster when using an algorithm like euclidean clustering. Below the image showing a schematic tree to make easy undertand the concept. The new point (7.2, 6.1) must inserted to D node.
 
-<p align="center">
-  <img src="./images/kdtree5.jpg" width="617" >
-</p>
+![alt text |width=450px | align="middle"][image4]
 
 Once the KD-Tree method for searching for nearby points is implemented, its not difficult to implement a euclidean clustering method that groups individual cluster indices based on their proximity
 
@@ -72,9 +75,7 @@ This algorithm is availabe on the file [cluster.cpp](./src/quiz/cluster/cluster.
 ```
 Below the result.
 
-<p align="center">
-  <img src="./images/KdTree2D.jpg" width="617">
-</p>
+![alt text |width=450px | align="middle"][image5]
 
 The Cluster code in the main code is available from lines xxxx to xxxx.
 
@@ -114,6 +115,4 @@ The `Main Code` is the file [environment.cpp](./src/environment.cpp). To run the
 ```
 Below the result.
 
-<p align="center">
-  <img src="./images/final_video.jpg" width="600" url= "https://www.youtube.com/watch?v=K5tcjX1W1BU" >
-</p>
+![alt text |width=450px | align="middle"][image6]](https://www.youtube.com/watch?v=K5tcjX1W1BU)
