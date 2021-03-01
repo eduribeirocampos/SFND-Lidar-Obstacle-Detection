@@ -17,7 +17,7 @@
 ![alt text |width=450px | align="middle"][image1]
 
 
-Throughout the Lidar course, we learned perspectives about Lidar from [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was teached by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professionals from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
+Throughout the Lidar course, we learned perspectives about Lidar with [Michael Maile](https://www.linkedin.com/in/michael-maile-ab7a078/).(Director, Sensor Fusion & Localization) and the software approach was teached by [Aaron Brown](https://www.linkedin.com/in/awbrown90/) (Senior AV Software Engineer). Both professionals from [MBRDNA](https://www.mbrdna.com/) (Mercedes-Benz Reasearch & Development North America, Inc) team.
 
 It was studied the best practice to develop a pipeline to work with Lidar data.For more details please check the [Velodyne website](https://velodynelidar.com/products/hdl-64e/) and the [Point Cloud Library](https://pointclouds.org/).
 
