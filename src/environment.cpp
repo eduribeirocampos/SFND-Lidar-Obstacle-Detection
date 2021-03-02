@@ -49,15 +49,15 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
   
  // uncoment this block to streaming process
   pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloud1;
-  inputCloud1 = pointProcessor.FilterCloud(inputCloud, 0.25 , Eigen::Vector4f (-10,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
+  inputCloud1 = pointProcessor.FilterCloud(inputCloud, 0.25 , Eigen::Vector4f (-12,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
 
   
   pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloud2;
-  inputCloud2 = pointProcessor.FilterCloud(inputCloud, 0.35 , Eigen::Vector4f (-10,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
+  inputCloud2 = pointProcessor.FilterCloud(inputCloud, 0.35 , Eigen::Vector4f (-12,-5,-2,1), Eigen::Vector4f (30 , 8 , 1 , 1));
   
-  std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> RansacSegmentCloud1 = pointProcessor.RANSAC_SegmentPlane(inputCloud1, 150 , 0.2);
+  std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> RansacSegmentCloud1 = pointProcessor.RANSAC_SegmentPlane(inputCloud1, 130 , 0.2);
 
-	std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> RansacSegmentCloud2 = pointProcessor.RANSAC_SegmentPlane(inputCloud2, 100 , 0.2); 
+  std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> RansacSegmentCloud2 = pointProcessor.RANSAC_SegmentPlane(inputCloud2, 100 , 0.2); 
 
   renderPointCloud(viewer,RansacSegmentCloud2.second, "planeCloud" , Color(1,0,1));
   
@@ -65,7 +65,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
   
   //std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering(RansacSegmentCloud.first,0.25,50,600); //uncomente this line to cluster objects from PCL library
 
-  std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering_NoPCL(RansacSegmentCloud1.first,0.25,50,600);
+  std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering_NoPCL(RansacSegmentCloud1.first,0.3,18,550);
  
   
   int clusterId = 0;
