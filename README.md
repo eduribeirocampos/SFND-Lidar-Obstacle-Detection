@@ -48,7 +48,7 @@ Below the result.
 
 ![alt text |width=450px | align="middle"][image3]
 
-The Ransac Function used in the main [code](/src/) is available on file [processPointClouds.cpp](src/processPointClouds.cpp] from lines 134 to 222.
+The Ransac Function used in the main [code](/src/) is available on file [processPointClouds.cpp](src/processPointClouds.cpp) from lines 134 to 222.
 
 
 ## 2. Clustering.
